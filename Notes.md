@@ -72,7 +72,35 @@ right = mid - 1
 [35搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
 要考虑从0或者len(nums)处插入的可能
 
-[]
+[69x的完全平方根](https://leetcode-cn.com/problems/sqrtx/solution/x-de-ping-fang-gen-by-leetcode-solution/)
+注意拟牛顿解法
+
+[367有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/)
+
+[34在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+最好把直接二分查找和找数字的左右边界法分别做一下
+
+**总结**
+找target在有序数组nums中的右边界
+```
+def help(target):
+    i, j = 0, len(nums)-1
+    while i <= j:
+        m = (i + j) // 2
+        if nums[m] <= target: i = m+1
+        else: j = m-1
+    return i
+```
+找target在有序数组nums中的左边界
+```
+def help(target):
+    i, j = 0, len(nums)-1
+    while i <= j:
+        m = (i + j) // 2
+        if nums[m] >= target: j = m-1
+        else: i = m+1
+    return j
+```
 
 
 
