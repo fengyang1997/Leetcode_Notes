@@ -84,7 +84,7 @@ right = mid - 1
 ![](assets/imgs/屏幕截图%202022-03-31%20192840.png)
 ![](assets/imgs/屏幕截图%202022-03-31%20192935.png)
 
-**总结**
+### 总结
 找target在有序数组nums中的右边界
 ```
 def help(target):
@@ -106,6 +106,21 @@ def help(target):
     return j
 ```
 
+## 4.2 双指针法
+一般用于数组和链表的元素删除、移动
+
+### 相关题目
+[移除数组中的某个元素，要求空间复杂度为$O(1)$](https://leetcode-cn.com/problems/remove-element/)
+
+[删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+
+[移动零(可以看看快排思想的解法)](https://leetcode-cn.com/problems/move-zeroes/)
+
+[比较含退格的字符串(注意whlie>=0时等于号的取值意义)](https://leetcode-cn.com/problems/backspace-string-compare/)
+
+
+
+### 总结
 
 
 
