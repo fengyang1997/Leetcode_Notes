@@ -80,6 +80,10 @@ right = mid - 1
 [34在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 最好把直接二分查找和找数字的左右边界法分别做一下
 
+[分界思想解决有序数据的问题](https://www.bilibili.com/video/BV1d54y1q7k7/?spm_id_from=333.788.recommend_more_video.0/)
+![](assets/imgs/屏幕截图%202022-03-31%20192840.png)
+![](assets/imgs/屏幕截图%202022-03-31%20192935.png)
+
 **总结**
 找target在有序数组nums中的右边界
 ```
