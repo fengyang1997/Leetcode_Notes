@@ -23,6 +23,20 @@
 |    //    |   向下取除数|
 |    %     |   取余数|
 
+## 1.3 常见操作
+
+### 1.3.1 列表操作
+
+**创建空表**
+```
+L = []
+```
+**创建长度为n的列表**
+```
+L = [0] * n
+```
+
+
 
 
 # 二、基本概念
@@ -80,6 +94,8 @@ right = mid - 1
 [34在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 最好把直接二分查找和找数字的左右边界法分别做一下
 
+[H 指数 II](https://leetcode-cn.com/problems/h-index-ii/)
+
 [分界思想解决有序数据的问题](https://www.bilibili.com/video/BV1d54y1q7k7/?spm_id_from=333.788.recommend_more_video.0/)
 ![](assets/imgs/屏幕截图%202022-03-31%20192840.png)
 ![](assets/imgs/屏幕截图%202022-03-31%20192935.png)
@@ -110,6 +126,8 @@ def help(target):
 一般用于数组和链表的元素删除、移动
 
 ### 相关题目
+
+#### 普通双指针法
 [移除数组中的某个元素，要求空间复杂度为$O(1)$](https://leetcode-cn.com/problems/remove-element/)
 
 [删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
@@ -118,10 +136,17 @@ def help(target):
 
 [比较含退格的字符串(注意whlie>=0时等于号的取值意义)](https://leetcode-cn.com/problems/backspace-string-compare/)
 
+[有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
 
+#### 滑动窗口法
+[长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)
+
+[水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)
+
+[最小覆盖字串](https://leetcode-cn.com/problems/minimum-window-substring/)
 
 ### 总结
-
+双指针法的关键是两个指针的位置如何移动，双指针可能分别在两端也可能都在一端，每个指针的移动操作需要根据具体的情况分析，例如[水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)中慢指针的移动操作。
 
 
 
