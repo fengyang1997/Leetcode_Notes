@@ -36,7 +36,56 @@ L = []
 L = [0] * n
 ```
 
+### 1.3.2 字典操作
+字典的空间复杂度为$O(n)$，查找的时间复杂度为$O(1)$
 
+**字典的基本操作**
+1.字典使用规则
+```
+dict[key]=value#key可以是字符串也可以是数字但不能重复
+```
+2.字典基本操作
+```
+del dict[key]#字典删除键值对
+dict.clear()#清空字典
+dict.get(key)#通过key获得value
+dict.update({key1:value1,key1:value1})#更新，若key存在于原字典，则更新其value值
+dict.items(),dict.keys(),dict.values()#获得所有键值对/关键字/值，但若想访问需将返回值用list()方法转换
+```
+**使用字典格式化字符串**
+```
+# 字符串模板中使用key
+temp = '教程是:%(name)s, 价格是:%(price)010.2f, 出版社是:%(publish)s'
+book = {'name':'Python基础教程', 'price': 99, 'publish': 'C语言中文网'}
+# 使用字典为字符串模板中的key传入值
+print(temp % book)
+book = {'name':'C语言小白变怪兽', 'price':159, 'publish': 'C语言中文网'}
+# 使用字典为字符串模板中的key传入值
+print(temp % book)
+```
+输出为
+```
+教程是:Python基础教程, 价格是:0000099.00, 出版社是:C语言中文网
+教程是:C语言小白变怪兽, 价格是:0000159.00, 出版社是:C语言中文网
+```
+
+
+**当元素无重复时可直接创建字典来一一对应下标与元素**
+```
+hashmap = {}
+for index, element in enumerate(nums):
+    hashmap[element] = index
+hashmap.get(element)#可以直接获得元素的下标值，若没有则返回None
+若想让它在没有时返回0，可以:
+hashmap=collections.defaultdict(int)
+```
+
+**可以创建一个字典来保存某列表中元素的个数**
+```
+need = collections.defaultdict(int)
+for c in t:#t为某字符串
+    need[c]+=1
+```
 
 
 # 二、基本概念
