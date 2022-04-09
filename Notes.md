@@ -25,7 +25,14 @@
 
 ## 1.3 常见操作
 
-### 1.3.1 列表操作
+### 1.3.1 简单操作
+
+**创建无限大数字**
+```
+inf = float('inf')
+```
+
+### 1.3.2 列表操作
 
 **创建空表**
 ```
@@ -35,8 +42,13 @@ L = []
 ```
 L = [0] * n
 ```
+**使用列表模拟矩阵**
+```
+n = 10
+matrix = [[0] * n for _ in range(n)]
+```
 
-### 1.3.2 字典操作
+### 1.3.3 字典操作
 字典的空间复杂度为$O(n)$，查找的时间复杂度为$O(1)$
 
 **字典的基本操作**
@@ -87,6 +99,16 @@ for c in t:#t为某字符串
     need[c]+=1
 ```
 
+### 1.3.3 python中的链表定义和操作
+
+**链表定义**
+```
+class ListNode:
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+#定义一个node
+```
 
 # 二、基本概念
 
@@ -192,13 +214,27 @@ def help(target):
 
 [水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)
 
-[最小覆盖字串](https://leetcode-cn.com/problems/minimum-window-substring/)
+[最小覆盖字串(注意理解)](https://leetcode-cn.com/problems/minimum-window-substring/)
 
 []()
 
 
 ### 总结
 双指针法的关键是两个指针的位置如何移动，双指针可能分别在两端也可能都在一端，每个指针的移动操作需要根据具体的情况分析，例如[水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/)中慢指针的移动操作。
+
+## 4.3 链表的一些技巧
+主要包含元素删除、顺序调换、环形链表等
+
+### 相关题目
+
+**添加虚拟头节点**
+[移除链表中的指定元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)
+
+**设计链表实现各种功能**
+[设计链表](https://leetcode-cn.com/problems/design-linked-list/)
+
+
+
 
 
 
