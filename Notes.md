@@ -32,6 +32,22 @@
 inf = float('inf')
 ```
 
+**python中的类**
+```
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+class Student(object):
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
+    def get_name(self):
+        return self.__name
+```
+第二种定义方法的name和score属于私有变量，无法直接通过.name来访问，但可以在类中定义方法来获得，因为在内部是可以访问私有变量的。
+
 ### 1.3.2 列表操作
 
 **创建空表**
