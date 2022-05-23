@@ -80,6 +80,14 @@ dict.get(key)#通过key获得value
 dict.update({key1:value1,key1:value1})#更新，若key存在于原字典，则更新其value值
 dict.items(),dict.keys(),dict.values()#获得所有键值对/关键字/值，但若想访问需将返回值用list()方法转换
 ```
+```
+删除某一字典键值对，不要直接用
+for c in need:
+for c in list(need.keys()):
+                    a = need[c]
+                    if a==0:
+                        del need[c]
+```
 **使用字典格式化字符串**
 ```
 # 字符串模板中使用key
