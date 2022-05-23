@@ -63,6 +63,12 @@ L = [0] * n
 n = 10
 matrix = [[0] * n for _ in range(n)]
 ```
+**列表逆序**
+```
+list.reverse()
+s = 'hello'
+reversed_s = s[::-1]
+```
 
 ### 1.3.3 字典操作
 字典的空间复杂度为$O(n)$，查找的时间复杂度为$O(1)$
