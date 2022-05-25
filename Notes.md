@@ -239,6 +239,9 @@ def help(target):
 
 [有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
 
+[三数之和](https://leetcode.cn/problems/3sum/)
+注意高效去重的操作方法
+
 #### 滑动窗口法
 [长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)
 
@@ -246,7 +249,6 @@ def help(target):
 
 [最小覆盖字串(注意理解)](https://leetcode-cn.com/problems/minimum-window-substring/)
 
-[]()
 
 
 ### 总结
