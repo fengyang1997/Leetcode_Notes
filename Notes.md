@@ -268,6 +268,8 @@ def help(target):
 [链表相交](https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/)
 注意遍历方法
 [环形链表](https://leetcode.cn/problems/linked-list-cycle-ii/)
+注意使用相对速度方法理解为什么环形链表快慢指针为何一定会相遇，为何能找到环入口，为何在慢指针走完一圈前一定会和快指针相遇。[理解](https://www.programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html#_142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8ii)
+
 
 
 
