@@ -262,6 +262,13 @@ def help(target):
 
 **设计链表实现各种功能**
 [设计链表](https://leetcode-cn.com/problems/design-linked-list/)
+[翻转链表](https://leetcode.cn/problems/reverse-linked-list/)
+[删除链表的倒数第n个节点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
+注意添加虚拟头节点以及快慢指针的操作
+[链表相交](https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/)
+注意遍历方法
+[环形链表](https://leetcode.cn/problems/linked-list-cycle-ii/)
+
 
 
 
