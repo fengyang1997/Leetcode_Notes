@@ -69,6 +69,11 @@ list.reverse()
 s = 'hello'
 reversed_s = s[::-1]
 ```
+**字符串和列表**
+```
+s = list(s)
+s = ''.join(s)
+```
 
 ### 1.3.3 字典操作
 字典的空间复杂度为$O(n)$，查找的时间复杂度为$O(1)$
@@ -271,6 +276,20 @@ def help(target):
 注意遍历方法
 [环形链表](https://leetcode.cn/problems/linked-list-cycle-ii/)
 注意使用相对速度方法理解为什么环形链表快慢指针为何一定会相遇，为何能找到环入口，为何在慢指针走完一圈前一定会和快指针相遇。[理解](https://www.programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html#_142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8ii)
+
+## 4.4 字符串
+
+
+### 相关题目
+[字符串反转](https://leetcode.cn/problems/reverse-string-ii/submissions/)
+```
+for i in range(0,n,k):
+i = 0,k,2k,3k......
+s[0:k] = s[0:k][::-1]
+s = s[::-1]
+```
+
+
 
 
 
