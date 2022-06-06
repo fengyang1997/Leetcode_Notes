@@ -69,7 +69,7 @@ list.reverse()
 s = 'hello'
 reversed_s = s[::-1]
 ```
-**字符串和列表**
+**字符串和列表互相转换**
 ```
 s = list(s)
 s = ''.join(s)
@@ -288,6 +288,8 @@ i = 0,k,2k,3k......
 s[0:k] = s[0:k][::-1]
 s = s[::-1]
 ```
+[替换空格](https://leetcode.cn/problems/ti-huan-kong-ge-lcof/)
+注意如果原地插入就每次都需要后移
 
 
 
