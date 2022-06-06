@@ -290,6 +290,8 @@ s = s[::-1]
 ```
 [替换空格](https://leetcode.cn/problems/ti-huan-kong-ge-lcof/)
 注意如果原地插入就每次都需要后移
+![](assets/imgs/e6c9d24ely1go6qmevhgpg20du09m4qp.gif)
+
 
 
 
