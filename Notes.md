@@ -68,6 +68,7 @@ matrix = [[0] * n for _ in range(n)]
 list.reverse()
 s = 'hello'
 reversed_s = s[::-1]
+s[0:n] = list(reversed(s[0:n]))
 ```
 **字符串和列表互相转换**
 ```
@@ -291,7 +292,7 @@ s = s[::-1]
 [替换空格](https://leetcode.cn/problems/ti-huan-kong-ge-lcof/)
 注意如果原地插入就每次都需要后移
 ![](assets/imgs/e6c9d24ely1go6qmevhgpg20du09m4qp.gif)
-
+[翻转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/)
 
 
 
