@@ -293,6 +293,9 @@ s = s[::-1]
 注意如果原地插入就每次都需要后移
 ![](assets/imgs/e6c9d24ely1go6qmevhgpg20du09m4qp.gif)
 [翻转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/)
+**KMP算法相关题目：**
+[实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
+[重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/)
 
 
 
