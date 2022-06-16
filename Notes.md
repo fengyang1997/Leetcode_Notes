@@ -297,6 +297,14 @@ s = s[::-1]
 [实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
 [重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/)
 
+## 4.5 栈与队列
+
+
+### 相关题目
+
+[括号匹配](https://leetcode.cn/problems/valid-parentheses/)
+
+
 
 
 
