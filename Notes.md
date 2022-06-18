@@ -6,7 +6,7 @@
 
 ## 1.1 可直接使用的python內部的函数
 
-### 排序
+### 1.1.1排序
 **list.sort()与.sorted()**
 
 均使用timesort，但是.sort()一般用于列表，而.sorted()一般用于对所有可迭代对象进行排序
@@ -14,6 +14,95 @@
 时间复杂度$O(nlogn)$空间复杂$O(n)$
 
 [.sort()详细实现细节](https://www.cnblogs.com/clement-jiao/p/9243066.html#:~:text=%E5%89%8D%E4%B8%8D%E4%B9%85%E5%9C%A8%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%20sort%E4%B8%8Esorted%E7%9A%84%E5%8C%BA%E5%88%AB%20%E4%B8%AD%E6%94%B6%E5%88%B0%E4%BA%86%E8%BF%99%E6%A0%B7%E7%9A%84%E4%B8%80%E4%B8%AA%E6%8F%90%E9%97%AE%EF%BC%9A%E2%80%9Cpython%E7%9A%84%20sort%20%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%20%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%98%AF%E5%A4%9A%E5%B0%91,%E2%80%9D%E3%80%82%20%E5%87%A0%E7%95%AAGoogle%E4%B9%8B%E5%90%8E%E6%9C%89%E4%BA%86%E4%BB%A5%E4%B8%8B%E7%9A%84%E5%9B%9E%E7%AD%94%EF%BC%9A%20%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6%E4%B8%BA%EF%BC%9ATimesort%20%E6%9C%80%E5%9D%8F%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%BA%EF%BC%9AO%EF%BC%88n%20log%20n%EF%BC%89%20%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%BA%EF%BC%9AO%EF%BC%88n%EF%BC%89/)
+
+### 1.1.2 collections模块
+
+#### Counter
+```
+from collections import Counter
+
+str1 = "aabbfkrigbgsejaae"
+print(Counter(str1))
+print(dict(Counter(str1)))#相当字典用要先dict()
+#结果:
+#Counter({'a': 4, 'b': 3, 'g': 2, 'e': 2, 'f': 1, 'k': 1, 'r': 1, 'i': 1, 's': 1, 'j': 1})
+#{'a': 4, 'b': 3, 'f': 1, 'k': 1, 'r': 1, 'i': 1, 'g': 2, 's': 1, 'e': 2, 'j': 1}
+
+dic1 = {'a': 3, 'b': 4, 'c': 0, 'd': -2}
+print(Counter(dic1).most_common(3))
+```
+#### deque
+双向队列,
+操作有pop leftpop append leftappend count insert(index,obj)(pop默认先推队尾)
+```
+from collections import deque
+ex = (1, "h", 3)
+st = "abcd"
+list1 = [0, 1, 2, 3]
+dst = deque(st)
+dlist1 = deque(list1)
+dst.extend(ex)
+dlist1.extend(ex)
+print(dst)
+print(dlist1)
+#结果：
+#deque(['a', 'b', 'c', 'd', 1, 'h', 3])
+#deque([0, 1, 2, 3, 1, 'h', 3])
+```
+
+### 1.1.3 heapq模块
+由空表建立小根堆
+**注意里面都是heappop(a)而非a.heappop()**
+```
+import heapq
+a = []
+heapq.heappush(a,1)
+heapq.heappush(a,2)
+······
+```
+由列表建立小根堆
+```
+a = [6,1,2,3,7]
+heapq.heapify(a)
+#要建大根堆可以使用如下操作
+a = list(map(lambda x:-x,a))
+heapq.heapify(a)
+a = list(map(lambda x:-x,a))
+#也可以在添加元素时直接取负
+for i in range(len(a)):
+    b = []
+    heapq.heappush(-a[i])
+b = list(map(lambda x:-x,a))
+```
+进行堆排序
+```
+def heap_sortd(arr):
+    if len(arr)==0:
+        return []
+    h = []
+    for i in arr:
+        heapq.heappush(h,i)
+    L = []
+    while (h):
+        L.append(heapq.heappop(h))
+    return L
+```
+多个列表一起建堆
+```
+heapq.merge(l1,l2,l3)
+```
+取前n大数据
+```
+a = [0, 1, 2, 3, 4, 5, 5, 7, 8, 10, 15, 20, 25]
+heapq.nlargest(5,a)#heapq.nsmallest(5,a)
+[25, 20, 15, 10, 8]
+
+>>>b = [('a',1),('b',2),('c',3),('d',4),('e',5)]
+>>>heapq.nlargest(1,b,key=lambda x:x[1])
+[('e', 5)]
+```
+
+
 
 ## 1.2 运算符
 
@@ -303,6 +392,10 @@ s = s[::-1]
 ### 相关题目
 
 [括号匹配](https://leetcode.cn/problems/valid-parentheses/)
+[删除相邻相同元素](https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/)
+[逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
+[滑动窗口的最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+[前k个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/)
 
 
 
