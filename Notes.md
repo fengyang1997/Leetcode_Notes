@@ -81,7 +81,7 @@ def heap_sortd(arr):
         return []
     h = []
     for i in arr:
-        heapq.heappush(h,i)
+        heapq.heappush(h,i)#heapq.heappush(h,(i,key))
     L = []
     while (h):
         L.append(heapq.heappop(h))
@@ -102,6 +102,13 @@ heapq.nlargest(5,a)#heapq.nsmallest(5,a)
 [('e', 5)]
 ```
 
+### 1.1.4 map、zip、sorted
+```
+f = list(zip(l1,l2))
+sorted(f,key=lambda x:x[1])
+
+map(function,l1)
+```
 
 
 ## 1.2 运算符
@@ -222,6 +229,10 @@ hashmap=collections.defaultdict(int)
 need = collections.defaultdict(int)
 for c in t:#t为某字符串
     need[c]+=1
+
+map_ = {} #nums[i]:对应出现的次数
+for i in range(len(nums)):
+    map_[nums[i]] = map_.get(nums[i], 0) + 1
 ```
 
 ### 1.3.3 python中的链表定义和操作
